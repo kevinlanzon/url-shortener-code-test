@@ -1,2 +1,4 @@
 rvm: '2.3.0'
-script: redis-server bundle exec rspec spec
+services:
+  - redis-server
+script: bundle exec rspec spec

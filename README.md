@@ -20,7 +20,7 @@ And then to run the Redis server, open a separate window in terminal and type:
 $ redis-server
 ```
 
-And then run:
+In another terminal window run:
 
 ```sh
 $ bundle install
