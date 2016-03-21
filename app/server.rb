@@ -3,7 +3,7 @@ require 'sinatra/base'
 class UrlShortener < Sinatra::Base
 
   get '/' do
-    'Hello UrlShortener!'
+    erb :index
   end
 
   # start the server if ruby file executed directly
