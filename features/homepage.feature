@@ -3,6 +3,7 @@ Feature: Shortening a url
   seeing as I love short urls
   I want to enter my url in a form for shortening
 
+  @javascript
   Scenario: Submitting a long url
     Given I am on the homepage
     When I fill in "url" with "https://www.google.co.uk/"

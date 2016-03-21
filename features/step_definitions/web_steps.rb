@@ -10,6 +10,6 @@ When(/^click on "([^"]*)"$/) do |submit|
   click_button(submit)
 end
 
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |text|
+  expect(page).to have_content(text)
 end
