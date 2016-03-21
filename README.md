@@ -14,7 +14,7 @@ $ tar xvzf redis-stable.tar.gz
 $ cd redis-stable
 $ make
 ```
-And then to run redis, open another window in terminal and type:
+And then to run Redis, open a separate window in terminal and type:
 
 ```sh
 $ redis-server
@@ -37,6 +37,8 @@ How to run tests
 $ rspec
 $ cucumber
 ```
+
+----------
 
 We'd like you to create a URL shortening service.
 - It should have a route where you can send a POST request with a URL in the body, which
