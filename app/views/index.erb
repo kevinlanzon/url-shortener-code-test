@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>URL Shortener</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -10,11 +12,13 @@
     <a href="/">
     <div class="form-title">URL Shortener</div>
     </a>
-      <input id="url" name="url" type="text" value="<%= (params[:url]) %>">
-      <button name="submit" type="submit">submit</button>
+      <input id="url" name="url" placeholder="Paste a link here to shorten it" type="text" value="<%= (params[:url]) %>">
+      <button name="submit" type="submit">Shorten</button>
     <% if @short_url %>
-      Here is your shortened URL
-      <a name="short-url" href="<%= @short_url %>">http://short-url.com/<%= @short_url %></a>
+      <div class="result">
+        Here is your shortened URL
+        <a name="short-url" href="<%= @short_url %>">http://short-url.com/<%= @short_url %></a>
+      </div>
     <% end %>
     </form>
   </div>

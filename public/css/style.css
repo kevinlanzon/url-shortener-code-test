@@ -1,0 +1,76 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #363636;
+}
+
+.container {
+  width: 400px;
+  margin: 120px auto 0px auto;
+}
+
+form {
+  max-width: 300px;
+  height: 530px;
+  margin: auto;
+  padding: 100px 20px;
+  background: #F2F2F2;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-title {
+  margin: 0 0 30px 0;
+  text-align: center;
+  color: #76BD1D;
+  font-size: 3em;
+}
+
+.result {
+  margin: 0 0 30px 0;
+  text-align:center;
+}
+
+.result a {
+  font-size: 22px;
+  display: block;
+  margin-top: 30px;
+  color: #76BD1D;
+  padding: 8px;
+}
+
+input[type="text"],
+textarea,
+select {
+  border-radius: 5px;
+  color: #363636;
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 39px 10px 39px;
+  background-color: #76BD1D;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+}
