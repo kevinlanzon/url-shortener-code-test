@@ -1,6 +1,8 @@
 require './app/server'
 
-describe "My Sinatra Application" do
+describe "URL Shortener" do
+
+  let(:redis) { Redis.new }
 
   describe "#GET '/'" do
     it "loads the homepage" do
@@ -17,6 +19,13 @@ describe "My Sinatra Application" do
   describe "#POST '/'" do
     it "loads the homepage" do
       post '/'
+      expect(last_response).to be_ok
+    end
+
+    it "posts a long url" do
+      allow_any_instance_of(UrlShortener).to receive(:redis).and_return(redis)
+      expect(redis).to receive(:setnx)
+      post '/', url: "https://www.farmdrop.co.uk/"
       expect(last_response).to be_ok
     end
   end
