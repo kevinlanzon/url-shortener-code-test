@@ -1,5 +1,17 @@
+[![Build Status](https://travis-ci.org/kevinlanzon/url-shortener-code-test.svg?branch=master)](https://travis-ci.org/kevinlanzon/url-shortener-code-test)
+
 Url Shortener Code Test
 ========
+
+Technologies used
+----
+- Ruby
+- Sinatra
+- RSpec
+- Cucumber
+- Travis CI
+- HTML5
+- CSS3
 
 How to run
 --------
@@ -41,7 +53,7 @@ $ cucumber
 File Structure
 ----------------
 ```
--app
+- app
   - helpers
     - redis.rb
     - token.rb
@@ -61,7 +73,18 @@ File Structure
   - spec_helper.rb
 ```
 
-----------
+To do
+-----
+
+- [ ] Switch out Redis and use a hash for storing URLs
+- [ ] Implement Ajax for displaying the shortened URLs
+- [ ] Add error handling for inputing incorrect URLs
+
+--------
+
+Challenge
+------
+
 
 We'd like you to create a URL shortening service.
 - It should have a route where you can send a POST request with a URL in the body, which
