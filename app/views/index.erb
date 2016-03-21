@@ -7,10 +7,10 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <section>
     <form action="/" method="POST" id="shortener">
     <a href="/">
-    <div class="form-title">URL Shortener</div>
+      <div class="form-title">URL Shortener</div>
     </a>
       <input id="url" name="url" placeholder="Paste a link here to shorten it" type="text" value="<%= (params[:url]) %>">
       <button name="submit" type="submit">Shorten</button>
@@ -21,8 +21,7 @@
       </div>
     <% end %>
     </form>
-  </div>
+  </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="js/result.js"></script> -->
 </body>
 </html>
