@@ -1,4 +1,42 @@
-# Url Shortener Code Test
+Url Shortener Code Test
+========
+
+How to run
+--------
+
+You will need to download [Redis](http://redis.io/topics/quickstart)
+
+In order to compile Redis please follow these simple steps:
+
+```sh
+$ wget http://download.redis.io/redis-stable.tar.gz
+$ tar xvzf redis-stable.tar.gz
+$ cd redis-stable
+$ make
+```
+And then to run redis, open another window in terminal and type:
+
+```sh
+$ redis-server
+```
+
+And then run:
+
+```sh
+$ bundle install
+$ shotgun
+```
+
+Visit `localhost:9393` in the browser
+
+
+How to run tests
+---------
+
+```sh
+$ rspec
+$ cucumber
+```
 
 We'd like you to create a URL shortening service.
 - It should have a route where you can send a POST request with a URL in the body, which
