@@ -14,7 +14,7 @@ $ tar xvzf redis-stable.tar.gz
 $ cd redis-stable
 $ make
 ```
-And then to run Redis, open a separate window in terminal and type:
+And then to run the Redis server, open a separate window in terminal and type:
 
 ```sh
 $ redis-server
@@ -36,6 +36,29 @@ How to run tests
 ```sh
 $ rspec
 $ cucumber
+```
+
+File Structure
+----------------
+```
+-app
+  - helpers
+    - redis.rb
+    - token.rb
+  - views
+    - index.erb
+  - server.rb
+- features
+  - step_definitions
+    - web_steps.rb
+  - homepage.feature
+- public
+  - css
+    - normalize.css
+    - style.css
+- spec
+  - server_spec.rb
+  - spec_helper.rb
 ```
 
 ----------
