@@ -1,20 +1,14 @@
 require 'sinatra/base'
 require 'redis'
+require_relative 'helpers/token'
+require_relative 'helpers/redis'
+
+include UrlTokenHelper
+include RedisHelper
 
 class UrlShortener < Sinatra::Base
 
   set :public_folder, Proc.new { File.join(root, "..", "public") }
-
-  helpers do
-    def redis
-      @redis = Redis.new
-    end
-
-    def token(length)
-      chars = [*('A'..'Z'), *('a'..'z'), *(0..9)]
-      (0...length).map {chars.sample}.join.downcase
-    end
-  end
 
   get '/' do
     erb :index
