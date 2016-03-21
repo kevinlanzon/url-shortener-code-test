@@ -8,4 +8,6 @@ Feature: Shortening a url
     Given I am on the homepage
     When I fill in "url" with "https://www.google.co.uk/"
     And click on "submit"
-    Then I should see "Here is your shortened URL"
+    And I should see "Here is your shortened URL"
+    When I click on "short-url"
+    And I should see "Google"

@@ -28,6 +28,11 @@ class UrlShortener < Sinatra::Base
     erb :index
   end
 
+  get '/:short_url' do
+    @url = redis.get "links:#{params[:short_url]}"
+    redirect @url
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
